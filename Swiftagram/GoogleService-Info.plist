@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>569815278360-37g2p1ii010c0tc6c060ke2735b0h8kq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.569815278360-37g2p1ii010c0tc6c060ke2735b0h8kq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA09kM4xZVmCkV4V_V9RweOWOW21DvhJGk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>569815278360</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Socify.Swiftagram</string>
+	<key>PROJECT_ID</key>
+	<string>swiftagram-954eb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swiftagram-954eb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:569815278360:ios:910c73d5c7887d9f</string>
+	<key>DATABASE_URL</key>
+	<string>https://swiftagram-954eb.firebaseio.com</string>
+</dict>
+</plist>
