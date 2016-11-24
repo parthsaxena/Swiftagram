@@ -32,16 +32,17 @@ class RegisterViewController: UIViewController {
         
         FIRAuth.auth()?.createUser(withEmail: username!, password: password!, completion: { (user, error) in
             if error != nil {
-                let errorMessage = error?.localizedDescription
-                
                 // error creating account
+                
+                let errorMessage = error?.localizedDescription
                 let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             } else {
-                let alert = UIAlertController(title: "Success", message: "Account Created!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                // success
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostVC")
+                self.present(vc!, animated: true, completion: nil)
             }
         })
         

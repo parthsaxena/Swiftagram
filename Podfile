@@ -9,6 +9,8 @@ target 'Swiftagram' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage' 
 
   target 'SwiftagramTests' do
     inherit! :search_paths

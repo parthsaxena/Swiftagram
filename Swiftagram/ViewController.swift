@@ -24,6 +24,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // check if user is already signed in
+        if FIRAuth.auth()?.currentUser != nil {
+            // user is already logged in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC")
+            self.present(vc!, animated: false, completion: nil)
+        }
+        
+    }
+    
     @IBAction func signInTapped(_ sender: AnyObject) {
         
         let username = usernameTextField.text
@@ -37,9 +49,8 @@ class ViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             } else {
                 // success
-                let alert = UIAlertController(title: "Success", message: "You are logged in. ", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") 
+                self.present(vc!, animated: true, completion: nil)
             }
         })
         

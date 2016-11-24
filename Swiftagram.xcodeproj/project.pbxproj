@@ -18,6 +18,9 @@
 		8B26D62F1D8E59A500BD905F /* SwiftagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26D62E1D8E59A500BD905F /* SwiftagramUITests.swift */; };
 		8B26D63D1D8E616B00BD905F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B26D63C1D8E616B00BD905F /* GoogleService-Info.plist */; };
 		8B26D63F1D8E626900BD905F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26D63E1D8E626900BD905F /* RegisterViewController.swift */; };
+		8BBA463E1D8F8F220049F254 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA463D1D8F8F220049F254 /* PostViewController.swift */; };
+		8BE63CBD1DE69E340014BEE5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */; };
+		8BE63CBF1DE69EA70014BEE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE63CBE1DE69EA70014BEE5 /* MainViewController.swift */; };
 		A459A98C6C10439924C25022 /* Pods_SwiftagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FF31A03E2BC7C9363766A1 /* Pods_SwiftagramUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		8B26D6301D8E59A500BD905F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B26D63C1D8E616B00BD905F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B26D63E1D8E626900BD905F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8BBA463D1D8F8F220049F254 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		8BE63CBE1DE69EA70014BEE5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F6C93528F02BB79313FD4BBB /* Pods-SwiftagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftagramTests/Pods-SwiftagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,11 +147,14 @@
 		8B26D60D1D8E59A400BD905F /* Swiftagram */ = {
 			isa = PBXGroup;
 			children = (
+				8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */,
 				8B26D63C1D8E616B00BD905F /* GoogleService-Info.plist */,
 				8B26D60E1D8E59A400BD905F /* AppDelegate.swift */,
 				8B26D6101D8E59A400BD905F /* ViewController.swift */,
 				8B26D63E1D8E626900BD905F /* RegisterViewController.swift */,
+				8BBA463D1D8F8F220049F254 /* PostViewController.swift */,
 				8B26D6121D8E59A500BD905F /* Main.storyboard */,
+				8BE63CBE1DE69EA70014BEE5 /* MainViewController.swift */,
 				8B26D6151D8E59A500BD905F /* Assets.xcassets */,
 				8B26D6171D8E59A500BD905F /* LaunchScreen.storyboard */,
 				8B26D61A1D8E59A500BD905F /* Info.plist */,
@@ -224,6 +233,7 @@
 				8B26D6271D8E59A500BD905F /* Frameworks */,
 				8B26D6281D8E59A500BD905F /* Resources */,
 				BD421B19AE1DFF3DC439F084 /* [CP] Copy Pods Resources */,
+				03741BCF9664FD50B86E5C1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,7 +257,7 @@
 				TargetAttributes = {
 					8B26D60A1D8E59A400BD905F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = F8629F2ZNQ;
+						DevelopmentTeam = 69TNSUL7ZG;
 						ProvisioningStyle = Automatic;
 					};
 					8B26D61E1D8E59A500BD905F = {
@@ -311,6 +321,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03741BCF9664FD50B86E5C1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftagramUITests/Pods-SwiftagramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4FCEB11975B46D7ABFCB0C39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6FFFCBBBE2FE9B707CB132C2 /* [CP] Embed Pods Frameworks */ = {
@@ -368,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D398F49C9E31697FEEF431E4 /* [CP] Embed Pods Frameworks */ = {
@@ -413,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F71F9584C2C3E97473E02001 /* [CP] Copy Pods Resources */ = {
@@ -438,7 +463,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BBA463E1D8F8F220049F254 /* PostViewController.swift in Sources */,
 				8B26D63F1D8E626900BD905F /* RegisterViewController.swift in Sources */,
+				8BE63CBD1DE69E340014BEE5 /* PostTableViewCell.swift in Sources */,
+				8BE63CBF1DE69EA70014BEE5 /* MainViewController.swift in Sources */,
 				8B26D6111D8E59A400BD905F /* ViewController.swift in Sources */,
 				8B26D60F1D8E59A400BD905F /* AppDelegate.swift in Sources */,
 			);
@@ -591,7 +619,7 @@
 			baseConfigurationReference = 33FFF6A05EF28CFF4ABEBB57 /* Pods-Swiftagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8629F2ZNQ;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
 				INFOPLIST_FILE = Swiftagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.socify.Swiftagram;
@@ -605,7 +633,7 @@
 			baseConfigurationReference = 76F3E1BE958F546F124A981A /* Pods-Swiftagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8629F2ZNQ;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
 				INFOPLIST_FILE = Swiftagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.socify.Swiftagram;
