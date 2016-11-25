@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swiftagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Swiftagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -98,7 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-jj-luU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-jj-luU">
                                 <rect key="frame" x="68" y="99" width="239" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="239" id="1d6-lr-RUg"/>
@@ -140,13 +140,25 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="uRm-mx-oyA"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-LI-cw7">
+                                <rect key="frame" x="68" y="38" width="239" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TKy-0l-gRo"/>
+                                    <constraint firstAttribute="width" constant="239" id="hMu-zK-zeN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7ZO-fL-FOJ" firstAttribute="top" secondItem="iur-Ug-IRD" secondAttribute="bottom" constant="105" id="Fge-39-Ibo"/>
+                            <constraint firstItem="a5O-LI-cw7" firstAttribute="centerX" secondItem="Kr4-67-KRM" secondAttribute="centerX" id="Fqn-sz-ygA"/>
                             <constraint firstItem="4al-QZ-gOw" firstAttribute="centerX" secondItem="Kr4-67-KRM" secondAttribute="centerX" id="Sbv-zz-8Bg"/>
                             <constraint firstItem="Nfy-jj-luU" firstAttribute="top" secondItem="s12-ad-gqK" secondAttribute="bottom" constant="79" id="USg-3V-dhR"/>
                             <constraint firstItem="G0v-gb-hE9" firstAttribute="top" secondItem="Nfy-jj-luU" secondAttribute="bottom" constant="31" id="Ub0-T7-gn2"/>
+                            <constraint firstItem="Nfy-jj-luU" firstAttribute="top" secondItem="a5O-LI-cw7" secondAttribute="bottom" constant="31" id="b1P-G7-Oai"/>
                             <constraint firstItem="Nfy-jj-luU" firstAttribute="centerX" secondItem="Kr4-67-KRM" secondAttribute="centerX" id="dFf-Pr-deE"/>
                             <constraint firstItem="iur-Ug-IRD" firstAttribute="centerX" secondItem="Kr4-67-KRM" secondAttribute="centerX" id="rbQ-Iz-XeZ"/>
                             <constraint firstItem="4al-QZ-gOw" firstAttribute="top" secondItem="G0v-gb-hE9" secondAttribute="bottom" constant="33" id="t2n-Nu-mVF"/>
@@ -154,8 +166,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="Nfy-jj-luU" id="cLm-3m-VSg"/>
                         <outlet property="passwordTextField" destination="G0v-gb-hE9" id="xVS-je-ncB"/>
-                        <outlet property="usernameTextField" destination="Nfy-jj-luU" id="DEJ-Ln-BrL"/>
+                        <outlet property="usernameField" destination="a5O-LI-cw7" id="RNA-08-Pdv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d10-fF-idw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,6 +349,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swiftagram" id="cs3-gz-V91">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Pg4-g4-67V">
+                            <connections>
+                                <action selector="logOutTapped:" destination="Fxc-gF-ozh" id="5WV-XG-7Of"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Qrk-vw-Ij8">
                             <connections>
                                 <segue destination="Kt1-q2-rXg" kind="show" animates="NO" id="y0G-uB-cpp"/>

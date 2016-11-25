@@ -90,6 +90,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    @IBAction func logOutTapped(_ sender: Any) {
+        do {
+            try FIRAuth.auth()?.signOut()
+            // success, continue running code:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+            self.present(vc!, animated: true, completion: nil)
+        } catch {
+            // if error, run code below:
+            print("Error signing out user.")
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

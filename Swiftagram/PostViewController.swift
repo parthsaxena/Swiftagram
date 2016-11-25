@@ -34,25 +34,35 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func postTapped(_ sender: AnyObject) {
         
         if let uid = FIRAuth.auth()?.currentUser?.uid {
-            if let title = titleTextField.text {
-                if let content = contentTextView.text {
-                    let postObject: Dictionary<String, Any> = [
-                        "uid" : uid,
-                        "title" : title,
-                        "content" : content,
-                        "image" : imageFileName
-                    ]
-                    
-                    FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
-                    
-                    let alert = UIAlertController(title: "Success", message: "Your post has been sent!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    
-                    print("Posted to Firebase.")
-                    
+            
+            FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let userDictionary = snapshot.value as? [String: AnyObject] {
+                    for user in userDictionary {
+                        print(user)
+                        if let username = user.value as? String {
+                            if let title = self.titleTextField.text {
+                                if let content = self.contentTextView.text {
+                                    let postObject: Dictionary<String, Any> = [
+                                        "uid" : uid,
+                                        "title" : title,
+                                        "content" : content,
+                                        "username" : username,
+                                        "image" : self.imageFileName
+                                    ]
+                                    FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
+                                    
+                                    let alert = UIAlertController(title: "Success", message: "Your post has been sent!", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                                    self.present(alert, animated: true, completion: nil)
+                                    
+                                    print("Posted to Firebase.")
+                                    
+                                }
+                            }
+                        }
+                    }
                 }
-            }
+            })
         }
         
     }
