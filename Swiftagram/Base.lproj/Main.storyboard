@@ -350,11 +350,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Swiftagram" id="cs3-gz-V91">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="Pg4-g4-67V">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logOutTapped:" destination="Fxc-gF-ozh" id="5WV-XG-7Of"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Qrk-vw-Ij8">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kt1-q2-rXg" kind="show" animates="NO" id="y0G-uB-cpp"/>
                             </connections>
@@ -373,7 +375,7 @@
             <objects>
                 <navigationController storyboardIdentifier="PostVC" automaticallyAdjustsScrollViewInsets="NO" id="Kt1-q2-rXg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="acK-bh-AE1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="acK-bh-AE1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -391,7 +393,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="T7B-p5-xmo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OfP-3m-Pmh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OfP-3m-Pmh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

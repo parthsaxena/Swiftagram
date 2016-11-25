@@ -21,6 +21,7 @@
 		8BBA463E1D8F8F220049F254 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA463D1D8F8F220049F254 /* PostViewController.swift */; };
 		8BE63CBD1DE69E340014BEE5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */; };
 		8BE63CBF1DE69EA70014BEE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE63CBE1DE69EA70014BEE5 /* MainViewController.swift */; };
+		8BE63CC71DE7CD630014BEE5 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BE63CC51DE7CD4A0014BEE5 /* Billabong.ttf */; };
 		A459A98C6C10439924C25022 /* Pods_SwiftagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FF31A03E2BC7C9363766A1 /* Pods_SwiftagramUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		8BBA463D1D8F8F220049F254 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		8BE63CBE1DE69EA70014BEE5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8BE63CC51DE7CD4A0014BEE5 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		F6C93528F02BB79313FD4BBB /* Pods-SwiftagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftagramTests/Pods-SwiftagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 		8B26D60D1D8E59A400BD905F /* Swiftagram */ = {
 			isa = PBXGroup;
 			children = (
+				8BE63CC51DE7CD4A0014BEE5 /* Billabong.ttf */,
 				8BE63CBC1DE69E340014BEE5 /* PostTableViewCell.swift */,
 				8B26D63C1D8E616B00BD905F /* GoogleService-Info.plist */,
 				8B26D60E1D8E59A400BD905F /* AppDelegate.swift */,
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE63CC71DE7CD630014BEE5 /* Billabong.ttf in Resources */,
 				8B26D6191D8E59A500BD905F /* LaunchScreen.storyboard in Resources */,
 				8B26D63D1D8E616B00BD905F /* GoogleService-Info.plist in Resources */,
 				8B26D6161D8E59A500BD905F /* Assets.xcassets in Resources */,

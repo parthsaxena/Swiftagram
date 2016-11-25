@@ -21,6 +21,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
         
+        self.navigationController?.navigationBar.alpha = 0
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 19/255, green: 85/255, blue: 135/255, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Billabong", size: 35)!, NSForegroundColorAttributeName: UIColor.white]
+        
         loadData()
         
         // Uncomment the following line to preserve selection between presentations

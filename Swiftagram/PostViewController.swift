@@ -33,6 +33,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func postTapped(_ sender: AnyObject) {
         
+        if (self.imageFileName != "") {
+        // image has finished uploaded, save post
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             
             FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -52,7 +54,11 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                     FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
                                     
                                     let alert = UIAlertController(title: "Success", message: "Your post has been sent!", preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                                        // code will run when "OK" button is tapped
+                                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC")
+                                        self.present(vc!, animated: true, completion: nil)
+                                    }))
                                     self.present(alert, animated: true, completion: nil)
                                     
                                     print("Posted to Firebase.")
@@ -63,6 +69,13 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     }
                 }
             })
+        }
+            
+        } else {
+            // image has not finished uploading, give alert
+            let alert = UIAlertController(title: "Please Wait", message: "Your image has not finished uploading, please wait...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
